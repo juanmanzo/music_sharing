@@ -1,0 +1,20 @@
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-4 col-md-offset-4">
+            <div class = "well">
+                <h2 class = "text-center">Create Your Profile</h2>
+                <%= form_for :alb, url: user_albums_path do |f|%>
+                  <div class="form-group">
+                    <%= f.label :album, 'Album Title' %>
+                    <%= f.text_field :album, class: 'form-control' %>
+                  </div>
+                
+                <div class="form-group">
+                    <%= f.submit "Update Profile", class: 'btn btn-primary' %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    
+</div>
