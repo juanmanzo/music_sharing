@@ -3,6 +3,10 @@
     <h1 class="text-center">Create Your Profile</h1>
     <p class="text-center">Be a part of the MusicSharing community and fill out your profile!</p>
     <div class="well">
+      <div class = "text-center">
+      <%= image_tag(@album.images.first["url"] , class: 'album-image') %>
+      </div>
+      </br>
       <%= form_for @profile, url: user_profiles_path do |f| %>
           <div class="form-group">
             <%= f.label :album %>
@@ -17,7 +21,7 @@
           </div>
           <div class="form-group">
             <%= f.label :firstsong, 'First Song'%>
-            <%= f.text_field :firstsong, class: 'form-control' %>
+            <%= f.select :firstsong, @album.tracks.collect {|p| [ p.name, p.track_number ] }, { include_blank: true },  class: 'form-control' %>
           </div>
           <div class="form-group">
             <%= f.label :secondsong, 'Second Song' %>

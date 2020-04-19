@@ -44,3 +44,23 @@ h1, h2, h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.album-image{
+  width: 30rem;
+  height: 30rem;
+  border-width: 5px;
+  border-style: double;
+  border-color: black;
+}
+
+.album-name{
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: 'Cantarell', sans-serif;
+  
+}
+
+.artist-name{
+  font-size: 25px;
+  font-family: 'Bangers', cursive;
+}

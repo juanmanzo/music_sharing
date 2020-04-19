@@ -1,8 +1,11 @@
+require 'rspotify'
 class ProfilesController < ApplicationController
   # GET to /users/:user_id/profile/new
   def new
     # Render blank profile details form
     @profile = Profile.new
+    RSpotify.authenticate(Rails.application.secrets.sp_client_id, Rails.application.secrets.sp_client_secret)
+    @album = RSpotify::Album.find(params[:songsid])
   end
   def create
     # Ensure that we have the user who is filling out form
