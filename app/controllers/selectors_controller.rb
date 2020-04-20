@@ -1,5 +1,6 @@
 require 'rspotify'
 class SelectorsController < ApplicationController
+    before_action :authenticate_user!
     def new
         RSpotify.authenticate(Rails.application.secrets.sp_client_id, Rails.application.secrets.sp_client_secret)
         @album = RSpotify::Album.search(params[:album])

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class = "row">
+    <div class="col-md-4 col-md-offset-4 text-center">
+    <h2><%= @user.username %>'s Profile</h2>
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <%= image_tag(@user.profile.imageurl , class: 'album-image') %>
+    </div>
+
+    <div class="col-md-6 col-md-offset-1">
+      <h1 class = "album-h1"><%= @user.profile.album %></h1>
+      <div class="well">
+        <h3>Why this album is great</h3>
+        <%= @user.profile.comments %>
+      </div>
+        <div class="well ">
+          <h3>Best Songs</h3>
+          1. <%= @user.profile.firstsong %> </br>
+        2. <%= @user.profile.secondsong %> </br>
+        3. <%= @user.profile.thirdsong %>
+        </div>
+    </div>
+  </div>
+</div>
