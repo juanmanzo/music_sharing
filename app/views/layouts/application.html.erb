@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cantarell:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee+Shade&family=Bungee&family=Cantarell:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+    
   </head>
 
   <body>
@@ -27,12 +32,12 @@
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
-          <div class="nav navbar-nav navbar-right">
+          <div class="nav navbar-nav navbar-right btn-margin">
             <% if user_signed_in? %>
-              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn navbar-btn" %>
             <% else %>
-            <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn login-btn" %>
-            <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %>
+            <%= link_to "Log In", new_user_session_path, class: "btn navbar-btn login-btn" %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "btn navbar-btn" %>
             <% end %>
           </div>
           <ul class="nav navbar-nav navbar-right">
