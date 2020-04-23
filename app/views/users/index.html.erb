@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="text-center"><span class="devmatch">MusicSharing</span> Community <br> <small></small></h1>
+      <ul class="list-unstyled">
+        <% @users.each do |user| %>
+          <% if user.profile %>
+            <li>
+              <div class="prof-list-well well row">
+                <div class="col-sm-4 text-center">
+                    <%= link_to user do %>
+                      <%= image_tag user.profile.imageurl, class: "user-index-avatar" %>
+                  <% end %>                
+                </div>
+                <div>
+                  <%= link_to user do %>
+                    <h2 class="community-name"><%= user.username %></h2>
+                  <% end %>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

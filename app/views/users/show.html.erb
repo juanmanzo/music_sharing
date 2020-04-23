@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class = "prof-well well animated slideInDown" id= "color-change">
     <div class="row" id= "color-change">
@@ -14,17 +15,15 @@
     <h1 class = "album-year text-center alb-flag"><%= @user.profile.year %></h1>
   <div class = "row show-row">
     <div class = "col-md-8 col-md-offset-2 des-bg">
-    <div class="text-center ">
-      <div class="well">
-        <h3>Why this album is great</h3>
+    <div class = "alb-info color-flag">
+        <h3 class = "text-center">Why this album is great</h3>
         <%= @user.profile.comments %>
-      </div>
-        <div class="well ">
           <h3>Best Songs</h3>
           1. <%= @user.profile.firstsong %> </br>
         2. <%= @user.profile.secondsong %> </br>
         3. <%= @user.profile.thirdsong %>
-        </div>
+        
+        <a href = <%=@user.profile.url %> ><i class="fa fa-spotify social-icon"></i></a>
     </div>
     </div>
     </div>

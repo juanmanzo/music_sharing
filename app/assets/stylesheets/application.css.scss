@@ -23,7 +23,7 @@ h1, h2, h3 {
 }
 
 body{
-  background-color: #F4F4DB;
+  background-color: #6699cc;
 }
 
 .flash-container {
@@ -107,6 +107,7 @@ body{
 }
 .navbar-default{
   background-color: black;
+  border-color: black;
 }
 .navbar-default .navbar-brand {
     color: white;
@@ -116,4 +117,17 @@ body{
 }
 .navbar-default .navbar-nav > li > a:hover{
   color: darkgrey;
+}
+
+.btn-correct{
+  width: 50%;
+}
+
+.prof-list-well{
+	background-color: black;
+	border-radius: 50%;
+}
+
+.social-icon{
+  transform: scale(1.1);
 }

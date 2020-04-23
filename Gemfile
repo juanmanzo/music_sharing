@@ -30,7 +30,7 @@ gem 'hirb', '0.7.3'
 # Use Devise for user authentication
 gem 'devise', '4.2.0'
 
-# Use rspotify for Spotify API requests
+# Use rspotify for Spotify API
 gem 'rspotify'
 
 # Use Redis adapter to run Action Cable in production
