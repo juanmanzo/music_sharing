@@ -15,16 +15,38 @@
     <h1 class = "album-year text-center alb-flag"><%= @user.profile.year %></h1>
   <div class = "row show-row">
     <div class = "col-md-8 col-md-offset-2 des-bg">
-    <div class = "alb-info color-flag">
+    <div class = "alb-info">
+      <div class = "row color-flag">
+        <div class = "col-md-12">
         <h3 class = "text-center">Why this album is great</h3>
         <%= @user.profile.comments %>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-md-12 color-flag text-center">
           <h3>Best Songs</h3>
-          1. <%= @user.profile.firstsong %> </br>
-        2. <%= @user.profile.secondsong %> </br>
-        3. <%= @user.profile.thirdsong %>
-        
-        <a href = <%=@user.profile.url %> ><i class="fa fa-spotify social-icon"></i></a>
+          </div>
+          </div>
+        <div class = "row">
+          <div class = "col-md-12 song-style song-brd-one">
+              1. <%= @user.profile.firstsong %> </br>
+              </div>
+              <div class = "col-md-12 song-style song-brd">
+            2. <%= @user.profile.secondsong %> </br>
+            
+            </div>
+          </div>
+        <div class = "row">
+          <div class = "col-md-12 song-style song-brd">
+            3. <%= @user.profile.thirdsong %>
+            </div>
+        </div>
     </div>
+    </div>
+    </div>
+    <div class = "row spot-row">
+    <div class = "col-md-8 col-md-offset-2 text-center">
+        <a href = <%=@user.profile.url %> , id = "spotify-link"><i class="fa fa-spotify social-icon"></i></a>
     </div>
     </div>
     </div>

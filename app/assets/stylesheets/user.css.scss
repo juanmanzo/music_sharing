@@ -11,8 +11,45 @@
 }
 
 .user-index-avatar {
-	width: 128px;
-	height: 128px;
+	width: 60%;
 	border-radius: 50%;
+	border: 2px solid black;
 }
 
+.song-style{
+    font-size: 20px;
+}
+
+#spotify-link{
+    color: black;
+    text-align: right;
+    font-size: 50px;
+}
+
+#spotify-link:hover{
+    color: green;
+}
+.spot-row{
+    margin-top: 10px;
+}
+
+.song-brd-one{
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
+    background-color: white;
+    border-style: solid;
+}
+.song-brd{
+    border-color: black;
+    border-width: 0 2px 2px 2px;
+    background-color: white;
+    border-style: solid;
+}
+
+.row-index-margin{
+    margin-bottom: 10px;
+    
+}
+.community-name{
+    color: white;
+}
