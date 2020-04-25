@@ -1,11 +1,11 @@
 <div class = "container">
-    <div class = "well text-center">
+    <div class = "well selectors-well text-center">
         <% if @album.empty? %>
             <%= "No Results Found" %>
         <%else%>
             <% @album.each do |alb| %>
             
-                <div class = "well">
+                <div class = "well sel-alb-well">
                     <%= link_to user_selectors_path(songid: alb.id), method: :post do %>
                     <%= image_tag(alb.images.first["url"] , class: 'album-image') %>
                     <%end%>

@@ -23,7 +23,7 @@ h1, h2, h3 {
 }
 
 body{
-  background-color: #6699cc;
+  background-color: lightblue;
 }
 
 .flash-container {
@@ -123,10 +123,46 @@ body{
   width: 50%;
 }
 
-.prof-list-well{
-	
-}
-
 .social-icon{
   transform: scale(1.1);
+}
+
+.view-profile-btn{
+  background-color: light-green;
+  color: white;
+  width: 75%;
+}
+.song-brd{
+    border-color: black;
+    border-width: 0 2px 2px 2px;
+    background-color: white;
+    border-style: solid;
+    padding-left: 6px;
+}
+.song-brd-one{
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
+    background-color: white;
+    border-style: solid;
+    padding-left: 6px;
+}
+.selectors-well{
+  background-color: black;
+}
+
+.sel-alb-well{
+  background-color: white;
+  border: 2px solid black;
+}
+.flash-container{
+  margin-bottom: 10px;
+  height: inherit;
+}
+
+.black-border{
+  border: 2px solid black;
+}
+
+.fa-music{
+  margin-right: 2px;
 }

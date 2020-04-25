@@ -19,9 +19,14 @@
       <div class = "row color-flag">
         <div class = "col-md-12">
         <h3 class = "text-center">Why this album is great</h3>
-        <%= @user.profile.comments %>
+        
         </div>
       </div>
+      <div class = "row">
+          <div class = "col-md-12 comment-div">
+            <%= @user.profile.comments %>
+            </div>
+        </div>
       <div class = "row">
         <div class = "col-md-12 color-flag text-center">
           <h3>Best Songs</h3>
@@ -29,16 +34,16 @@
           </div>
         <div class = "row">
           <div class = "col-md-12 song-style song-brd-one">
-              1. <%= @user.profile.firstsong %> </br>
+             <i class="fa fa-music"></i> 1. <%= @user.profile.firstsong %> </br>
               </div>
               <div class = "col-md-12 song-style song-brd">
-            2. <%= @user.profile.secondsong %> </br>
+           <i class="fa fa-music"></i> 2. <%= @user.profile.secondsong %> </br>
             
             </div>
           </div>
         <div class = "row">
           <div class = "col-md-12 song-style song-brd">
-            3. <%= @user.profile.thirdsong %>
+           <i class="fa fa-music"></i> 3. <%= @user.profile.thirdsong %>
             </div>
         </div>
     </div>
@@ -48,6 +53,15 @@
     <div class = "col-md-8 col-md-offset-2 text-center">
         <a href = <%=@user.profile.url %> , id = "spotify-link"><i class="fa fa-spotify social-icon"></i></a>
     </div>
+    </div>
+    </div>
+    <div class = "container">
+    <div class = "row">
+      <div class = "col-md-11 show-username">
+        <div class = "username-color-change">
+        Submitted by: <%= @user.username %>
+        </div>
+      </div>
     </div>
     </div>
 </div>

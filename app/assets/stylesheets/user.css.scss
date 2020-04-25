@@ -33,18 +33,14 @@
     margin-top: 10px;
 }
 
-.song-brd-one{
+.comment-div{
     border-color: black;
     border-width: 2px 2px 2px 2px;
     background-color: white;
     border-style: solid;
+    padding: 10px 0 10px 0;
 }
-.song-brd{
-    border-color: black;
-    border-width: 0 2px 2px 2px;
-    background-color: white;
-    border-style: solid;
-}
+
 
 .row-index-margin{
     margin-bottom: 10px;
@@ -52,4 +48,23 @@
 }
 .community-name{
     color: white;
+}
+
+.index-shell{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 40px 0 10px 0;
+}
+
+.show-username{
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.show-row{
+    padding: 0 10px 0 10px;
+}
+.username-color-change{
+    font-size: 20px;
 }

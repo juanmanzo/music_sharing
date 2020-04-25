@@ -6,17 +6,16 @@
           <h2 class="text-center well-text-header">Your Profile</h2>
             <% if current_user.profile %>
               <div class="row">
-                  <div clss = "col-md-offset-5 col-md-4">
-                <div class="text-center">
-                <%= link_to "View your profile", user_path(current_user.id), class: 'btn btn-default btn-lg btn-block btn-correct' %>
-                </div>
+                <div class="col-md-12 text-center">
+                <%= link_to "View your profile", user_path(current_user.id), class: 'btn view-profile-btn btn-success btn-lg btn-correct' %>
+              
                 </div>
               </div>
             <% else %>
-              <h4 class="text-center">Create your profile so you can share your information with the community.</h4>
+              <h4 class="text-center">Create your profile so you can share your favorite album with the community.</h4>
               <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                  <%= link_to "Create your profile", new_user_profile_path(user_id: current_user.id), class: 'btn btn-info btn-lg btn-block' %>
+                <div class="col-md-12 text-center">
+                  <%= link_to "Create your profile", new_user_albums_path(user_id: current_user.id), class: 'btn view-profile-btn btn-primary btn-lg btn-correct' %>
                 </div>
               </div>
             <% end %>
@@ -29,10 +28,10 @@
         <div class="col-md-6 col-md-offset-3">
           <div class="well">
             <h2 class="text-center well-text-header">The Community</h2>
-            <h4 class="text-center well-copy">Visit the community to meet other developers, entrepreneurs and investors.</h4>
+            <h4 class="text-center well-copy">Visit the community to see other users favorite album</h4>
             <div class="row">
-              <div class="col-md-6 col-md-offset-3">
-                <%= link_to "Visit the community", users_path, class: 'btn btn-info btn-lg btn-block' %>
+              <div class="col-md-12 text-center">
+                <%= link_to "Visit the community", users_path, class: 'btn view-profile-btn btn-primary btn-lg btn-correct' %>
               </div>
             </div>
           </div>
@@ -40,14 +39,21 @@
       </div>
     </div>
   <% else %>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <h2>Welcome To Music Sharing</h2>
+        <h4>An Album Sharing community</h4>
+        </br>
+    </div>
+    </div>
     <div class="row">
-      <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2">
+      <div class="col-md-6 col-md-offset-3">
         <div class="well">
-          <h2 class="text-center well-text-header">Basic</h2>
-          <h4 class="text-center well-basic-copy">Sign up for free and get basic access to the community.</h4>
-          <div class="row basic-btn">
-            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-              <%= link_to "Sign up with Basic", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block signup-btn' %>
+          <h2 class="text-center well-text-header">Sign Up</h2>
+          <h4 class="text-center well-basic-copy">Sign up for free to make your own profile and to visit the community.</h4>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <%= link_to "Sign up with Basic", new_user_registration_path, class: 'btn view-profile-btn btn-primary btn-lg btn-correct' %>
             </div>
           </div>
         </div>

@@ -20,6 +20,9 @@ $(document).on('turbolinks:load', function(){
         if(color[0][0] < 100 || color[0][1] < 100 || color[0][2] < 100){
         $('.color-flag').css('color', 'white');
       }
+       if(color[2][0] < 100 || color[2][1] < 100 || color[2][2] < 100){
+        $('.username-color-change').css('color', 'white');
+      }
         $('#color-change').css('background-color', 'rgb(' + color[0] + ')');
         $('#my-img').css('border-color', 'rgb('+ color[2] + ')');
         $('.details-well').css('background-color', 'rgb('+ color[1] + ')');
@@ -51,6 +54,9 @@ $(document).on('turbolinks:load', function(){
     if(color[0][0] < 100 || color[0][1] < 100 || color[0][2] < 100){
       $('.color-flag').css('color', 'white');
     }
+    if(color[2][0] < 100 || color[2][1] < 100 || color[2][2] < 100){
+        $('.username-color-change').css('color', 'white');
+      }
     
     
     $('#color-change').css('background-color', 'rgb(' + color[0] + ')');
