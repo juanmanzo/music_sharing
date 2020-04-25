@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function(){
         // Use the new color as background for body
         if(color[1][0] < 100 || color[1][1] < 100 || color[1][2] < 100){
           $('.alb-flag').css('color', 'white');
-          $('#spotify-link').css('color', 'white');
+          $('.spotify-flag').css('color', 'white');
         }
         if(color[0][0] < 100 || color[0][1] < 100 || color[0][2] < 100){
         $('.color-flag').css('color', 'white');
@@ -49,7 +49,7 @@ $(document).on('turbolinks:load', function(){
     // Use the new color as background for body
     if(color[1][0] < 100 || color[1][1] < 100 || color[1][2] < 100){
       $('.alb-flag').css('color', 'white');
-      $('#spotify-link').css('color', 'white');
+      $('.spotify-flag').css('color', 'white');
     }
     if(color[0][0] < 100 || color[0][1] < 100 || color[0][2] < 100){
       $('.color-flag').css('color', 'white');

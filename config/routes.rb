@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
   resources :users do
-    resource :profiles
+    resource :profiles do
+      resources :likes
+    end
     resource :albums, only: [:new, :create]
     resource :selectors, only: [:new, :create]
   end

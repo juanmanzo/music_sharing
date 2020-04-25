@@ -51,7 +51,8 @@
     </div>
     <div class = "row spot-row">
     <div class = "col-md-8 col-md-offset-2 text-center">
-        <a href = <%=@user.profile.url %> , id = "spotify-link"><i class="fa fa-spotify social-icon"></i></a>
+      <a href = <%=@user.profile.url %> , class = "spotify-flag"><i class="fa fa-spotify social-icon"></i></a>
+      <a href = <%=@user.profile.url %> , class = "spotify-flag"><i class="fa fa-thumbs-up social-icon"></i></a>
     </div>
     </div>
     </div>
@@ -59,8 +60,10 @@
     <div class = "row">
       <div class = "col-md-11 show-username">
         <div class = "username-color-change">
+           <%= (@user.profile.likes.count) == 1 ? 'Like: ' : 'Likes: '%> <%= @user.profile.likes.count %>
+           
+          <%= button_to 'Like', user_profiles_likes_path(user_id: @user.profile.user_id),class: 'green-color', method: :post %></i>
         Submitted by: <%= @user.username %>
-        </div>
       </div>
     </div>
     </div>
