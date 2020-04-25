@@ -2,13 +2,13 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="well sel-alb-well">
-      <h1 class="text-center">Create Your Profile</h1>
-    <p class="text-center">Be a part of the MusicSharing community and fill out your profile!</p>
+      <h1 class="text-center">Edit Your Profile</h1>
+    <p class="text-center">Fill out your profile!</p>
       <div class = "text-center">
       <%= image_tag(@album.images.first["url"] , class: 'album-image') %>
       </div>
       </br>
-      <%= form_for @profile, url: user_profiles_path(albname: @album.name, imgurl: @album.images.first['url'], songsid: @songsid, url: @album.external_urls['spotify'], artist: @album.artists.first.name, year: @album.release_date[0..3]) do |f| %>
+      <%= form_for @profile, url: user_profiles_path(albname: @album.name, imgurl: @album.images.first['url'], songsid: @songsid, url: @album.external_urls['spotify'], artist: @album.artists.first.name, year: @album.release_date[0..3]),  method: :put do |f| %>
           <div class="text-center album-name">
             <%= @album.name %>
           </div>

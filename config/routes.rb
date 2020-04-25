@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   resources :contacts, only: :create
   get 'contact_us', to: 'contacts#new', as: 'new_contact'
+  get 'changealb', to: 'profiles#changealb', as: 'change_album'
+  post 'changealbcreate', to: 'profiles#changealbcreate'
+  get 'editalbum', to: 'profiles#editalbum', as: 'edit_album'
+  post 'albumcreate', to: 'profiles#albumcreate'
 end

@@ -8,7 +8,7 @@
               <div class="row">
                 <div class="col-md-12 text-center">
                 <%= link_to "View your profile", user_path(current_user.id), class: 'btn view-profile-btn btn-success btn-lg btn-correct' %>
-              
+                <%= link_to "Edit your profile", change_album_path(current_user.id), class: 'btn view-profile-btn btn-info btn-lg btn-correct' %>
                 </div>
               </div>
             <% else %>
