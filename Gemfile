@@ -33,6 +33,7 @@ gem 'devise', '4.2.0'
 # Use rspotify for Spotify API
 gem 'rspotify'
 
+gem "figaro"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '3.0'
 # Use ActiveModel has_secure_password
