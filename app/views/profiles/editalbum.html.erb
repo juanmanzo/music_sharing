@@ -5,13 +5,22 @@
             No Results Found
             </div>
             <div class = "row text-center">
-            <%= link_to "Retry Search", change_album_path(current_user.id), class: 'btn btn-success btn-lg btn-correct' %>
+         
+            <%= link_to change_album_path(current_user.id), class: 'clr-white-no text-center btn' do %>
+                Retry Search
+             <% end %>
+             
         
             </div>
         </div>
         <%else%>
         <div class = "well selectors-well text-center">
-            <h2 class = "clr-white">Choose an album for your Profile</h2>
+            <h2 class = "clr-white-no">Choose an album for your Profile</h2>
+            <div class = "new-btn">
+            <%= link_to change_album_path(current_user.id), class: 'clr-white-no text-center btn' do %>
+                Retry Search
+             <% end %>
+             </div>
             <% @album.each do |alb| %>
                 
                 <div class = "well sel-alb-well">
@@ -31,7 +40,5 @@
                  
             <%end%>
             </div>
-            <%= link_to "Retry Search", change_album_path(current_user.id), class: 'btn btn-success btn-lg btn-correct' %>
         <%end%>
-    
 </div>

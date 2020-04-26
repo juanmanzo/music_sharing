@@ -1,5 +1,6 @@
 <div class="container">
   <% if user_signed_in? %>
+  <h1 class = "white-color text-center">Welcome, <%= current_user.username %></h1>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="well sel-alb-well">
@@ -40,7 +41,7 @@
     </div>
   <% else %>
   <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
+      <div class="col-md-6 col-md-offset-3 text-center white-color">
         <h2>Welcome To Music Sharing</h2>
         <h4>An Album Sharing community</h4>
         </br>
@@ -50,10 +51,10 @@
       <div class="col-md-6 col-md-offset-3">
         <div class="well">
           <h2 class="text-center well-text-header">Sign Up</h2>
-          <h4 class="text-center well-basic-copy">Sign up for free to make your own profile and to visit the community.</h4>
+          <h4 class="text-center well-basic-copy">Sign up for free to share an album and to visit the community.</h4>
           <div class="row">
             <div class="col-md-12 text-center">
-              <%= link_to "Sign up with Basic", new_user_registration_path, class: 'btn view-profile-btn btn-primary btn-lg btn-correct' %>
+              <%= link_to "Sign up", new_user_registration_path, class: 'btn view-profile-btn btn-primary btn-lg btn-correct' %>
             </div>
           </div>
         </div>

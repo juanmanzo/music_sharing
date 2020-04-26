@@ -42,7 +42,7 @@
 }
 
 .username-index-row{
-    background-color: black;
+    background-color: #000000; 
     color: white;
     padding-bottom: 10px;
 }
@@ -84,4 +84,24 @@
 
 .icon-margin{
     margin-right: 2px;
+}
+
+.record-container:hover{
+    background-color: black;
+    background-image: none;
+}
+
+.record-container:hover .record{
+    border: 2px solid white;
+}
+
+.sign-up-alb-name{
+    
+}
+.sign-up-artist{
+    
+}
+
+.sign-up-year{
+    
 }

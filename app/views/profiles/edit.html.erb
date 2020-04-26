@@ -12,13 +12,19 @@
           <div class="text-center album-name">
             <%= @album.name %>
           </div>
+          <div class = "album-name text-center">
+            <%= @album.artists.first.name %>
+          </div>
+          <div class = "album-name text-center">
+            <%= @album.release_date[0..3] %>
+          </div>
+          </br>
           <div class="form-group">
-            <%= f.label :comments %>
+            <%= f.label :comments, 'Let us know why you like this album'%>
             <%= f.text_area :comments, class: 'form-control' %>
           </div>
-          <div class = "container">
-              <h3>Choose your Top 3 songs of the album</h3>
-          </div>
+         
+              <h3 class = "text-center">Choose your Top 3 songs of the album</h3>
           <div class="form-group">
             <%= f.label :firstsong, 'First Song'%>
             <%= f.select :firstsong, @album.tracks.collect {|p| [ p.name] }, { include_blank: true },  class: 'form-control' %>

@@ -23,7 +23,7 @@ h1, h2, h3 {
 }
 
 body{
-  background-color: lightblue;
+      background-color: rgb(34, 34, 34)
 }
 
 .flash-container {
@@ -57,7 +57,7 @@ body{
 }
 
 .album-name{
-  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 25px;
   font-family: 'Cantarell', sans-serif;
   
@@ -149,7 +149,7 @@ body{
     padding-left: 6px;
 }
 .selectors-well{
-  background-color: black;
+  background-color:  #485461;;
 }
 
 .sel-alb-well{
@@ -233,5 +233,23 @@ body{
   margin: 0px 10px 0px 10px;
   border: 2px solid black;
   background-color: #485461;
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+
 }
+
+.flash-container{
+  color: white;
+}
+
+.margin-b{
+  margin-bottom: 20px;
+}
+
+.clr-white-no{
+  color: white;
+}
+
+.new-btn{
+  margin-bottom: 20px;
+}
+
+

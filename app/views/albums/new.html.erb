@@ -1,8 +1,10 @@
 <div class = "container">
+    <div class = "text-center white-color"> <h1 class = "margin-b">Welcome, <%= @user.username %></h1></div>
     <div class = "row">
         <div class = "col-md-4 col-md-offset-4">
             <div class = "well">
-                <h2 class = "text-center">Create Your Profile</h2>
+                <h1 class = "text-center">Create Your Profile</h1>
+                <h3 class = "text-center">Search for an album you would like to share</br><i class="fa fa-play-circle"></i></h3>
                 <%= form_for :alb, url: user_albums_path do |f|%>
                   <div class="form-group">
                     <%= f.label :album, 'Album Title' %>
