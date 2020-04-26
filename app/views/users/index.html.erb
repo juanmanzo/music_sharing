@@ -1,26 +1,37 @@
 <div class="container">
-  <div class="row">
+  <div class="row index-container animated fadeIn slow">
     <div class="col-md-8 col-md-offset-2">
-      <h1 class="text-center"><span>MusicSharing</span> Community <br> <small></small></h1>
+      <h1 class="text-center white-color"><span>MusicSharing</span> Community <br> <small></small></h1>
       <ul class="list-unstyled">
         <% @users.each do |user| %>
           <% if user.profile %>
             <li class = "row-index-margin">
               <div class ="row row-index">
               <div class="prof-list-well col-md-8 col-md-offset-2 text-center">
-                <div class = "row index-shell">
-                
-                    <%= link_to user do %>
-                      <%= image_tag user.profile.imageurl, class: "user-index-avatar" %>
-                  <% end %> 
-                  
+                <div class = "row">
                   <div class = "row">
+                  <div class = "col-md-12">
+                  <div class='record-container'>
+                    <div class = "row">
+                    <div class = "record animated rollIn delay-1s">
+                    <%= link_to user do %>
+                      <%= image_tag user.profile.imageurl, class: "record-after" %>
+                      <div class = "record-middle"></div>
+                    </div>
+                  <% end %> 
+                  </div>
+                  <div class = "row username-index-row">
                   <div class="text-center">
                   <%= link_to user do %>
-                    <h2 class="community-name"><%= user.username %></h2>
-                  <% end %>
-                </div>
-                </div>
+                    <h2 class = "white-color"><%= user.username %></h2>
+                    <% end %>
+                    <h3 class = "white-color"> <i class="fa fa-thumbs-up icon-margin"></i><%=user.profile.likes.count %></h3>
+                  </div>
+                  </div>
+                  
+                  </div>
+                  </div>
+                  </div>
           
                 </div>
           

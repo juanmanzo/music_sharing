@@ -41,13 +41,21 @@
     padding: 10px 0 10px 0;
 }
 
+.username-index-row{
+    background-color: black;
+    color: white;
+    padding-bottom: 10px;
+}
+
 
 .row-index-margin{
     margin-bottom: 10px;
     
 }
 .community-name{
-    color: white;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 .index-shell{
@@ -67,4 +75,13 @@
 }
 .username-color-change{
     font-size: 20px;
+}
+
+.index-container{
+    margin: 0px 10px 0px 10px;
+}
+
+
+.icon-margin{
+    margin-right: 2px;
 }
