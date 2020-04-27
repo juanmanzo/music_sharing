@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
   def new
     # Render blank profile details form
     @profile = Profile.new
-    RSpotify.authenticate(ENV["sp_client_id"], ENV["sp_client_secret"])
+    RSpotify.authenticate(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET)
     @songsid = params[:songsid]
     @album = RSpotify::Album.find(params[:songsid])
     
@@ -20,7 +20,7 @@ class ProfilesController < ApplicationController
   end
   
   def editalbum
-    RSpotify.authenticate(ENV["sp_client_id"], ENV["sp_client_secret"])
+    RSpotify.authenticate(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET)
     @album = RSpotify::Album.search(params[:album])
   end
   
@@ -32,7 +32,7 @@ class ProfilesController < ApplicationController
   def edit
     # Render blank profile details form
     @profile = Profile.new
-    RSpotify.authenticate(ENV["sp_client_id"], ENV["sp_client_secret"])
+    RSpotify.authenticate(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET)
     @songsid = params[:songsid]
     @album = RSpotify::Album.find(params[:songsid])
   end
