@@ -11,11 +11,12 @@ class LikesController < ApplicationController
   
   private
   def find_post
-    @post = Profile.find(params[:user_id])
+    @post = Profile.find_by user_id: params[:user_id]
+    
   end
   
   def already_liked?
-    Like.where(user_id: current_user.id, profile_id:
-    params[:user_id]).exists?
+    @prof_id = Profile.find_by user_id: params[:user_id]
+    Like.where(user_id: current_user.id, profile_id: @prof_id.id).exists?
   end
 end

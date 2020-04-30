@@ -1,46 +1,46 @@
 <div class = "container">
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="well sel-alb-well">
-      <h1 class="text-center">Create Your Profile</h1>
-    <p class="text-center">Be a part of the MusicSharing community and fill out your profile!</p>
-      <div class = "text-center">
-      <%= image_tag(@album.images.first["url"] , class: 'album-image') %>
-      </div>
-      </br>
-      <%= form_for @profile, url: user_profiles_path(albname: @album.name, imgurl: @album.images.first['url'], songsid: @songsid, url: @album.external_urls['spotify'], artist: @album.artists.first.name, year: @album.release_date[0..3]) do |f| %>
-          <div class="text-center album-name">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well sel-alb-well">
+        <h1 class="text-center">Create Your Profile</h1>
+        <p class="text-center">Be a part of the MusicSharing community and fill out your profile!</p>
+        <div class = "text-center">
+          <%= image_tag(@album.images.first["url"] , class: 'album-image') %>
+        </div>
+        </br>
+        <%= form_for @profile, url: user_profiles_path(albname: @album.name, imgurl: @album.images.first['url'], songsid: @songsid, url: @album.external_urls['spotify'], artist: @album.artists.first.name, year: @album.release_date[0..3]) do |f| %>
+        <div class="text-center album-name">
             <%= @album.name %>
-          </div>
-          <div class = "album-name text-center">
+        </div>
+        <div class = "album-name text-center">
             <%= @album.artists.first.name %>
-          </div>
-          <div class = "album-name text-center">
-            <%= @album.release_date[0..3] %>
-          </div>
-          </br>
-          <div class="form-group">
-            <%= f.label :comments, 'Let us know why you like this album' %>
-            <%= f.text_area :comments, class: 'form-control' %>
-          </div>
-              <h3 class = "text-center">Choose your Top 3 songs of the album</h3>
-          <div class="form-group">
-            <%= f.label :firstsong, 'First Song'%>
-            <%= f.select :firstsong, @album.tracks.collect {|p| [ p.name] }, { include_blank: true },  class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :secondsong, 'Second Song' %>
-            <%= f.select :secondsong, @album.tracks.collect {|p| [ p.name] }, { include_blank: true },  class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :thirdsong, 'Third Song'%>
-            <%= f.select :thirdsong, @album.tracks.collect {|p| [ p.name] }, { include_blank: true },  class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.submit "Update Profile", class: 'btn btn-primary' %>
-          </div>
-        <% end %>
+        </div>
+        <div class = "album-name text-center">
+          <%= @album.release_date[0..3] %>
+        </div>
+        </br>
+        <div class="form-group">
+          <%= f.label :comments, 'Let us know why you like this album' %>
+          <%= f.text_area :comments, class: 'form-control' %>
+        </div>
+            <h3 class = "text-center">Choose your Top 3 songs of the album</h3>
+        <div class="form-group">
+          <%= f.label :firstsong, 'First Song'%>
+          <%= f.select :firstsong, @album.tracks.collect {|p| [ p.name] }, { include_blank: true },  class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :secondsong, 'Second Song' %>
+          <%= f.select :secondsong, @album.tracks.collect {|p| [ p.name] }, { include_blank: true },  class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :thirdsong, 'Third Song'%>
+          <%= f.select :thirdsong, @album.tracks.collect {|p| [ p.name] }, { include_blank: true },  class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Update Profile", class: 'btn btn-primary' %>
+        </div>
+          <% end %>
+      </div>
     </div>
   </div>
-</div>
 </div>
