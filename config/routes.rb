@@ -6,8 +6,6 @@ Rails.application.routes.draw do
     resource :profiles do
       resources :likes
     end
-    resource :albums, only: [:new, :create]
-    resource :selectors, only: [:new, :create]
   end
   get 'about', to: 'pages#about'
   resources :contacts, only: :create
@@ -16,4 +14,8 @@ Rails.application.routes.draw do
   post 'changealbcreate', to: 'profiles#changealbcreate'
   get 'editalbum', to: 'profiles#editalbum', as: 'edit_album'
   post 'albumcreate', to: 'profiles#albumcreate'
+  get 'choosealb', to: 'profiles#choosealb', as: 'choose_album'
+  post 'choosealbcreate', to: 'profiles#choosealbcreate'
+  get 'searchalb', to: 'profiles#searchalb', as: 'search_album'
+  post 'searchalbcreate', to: 'profiles#searchalbcreate'
 end

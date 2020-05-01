@@ -3,12 +3,30 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
   # GET to /users/:user_id/profile/new
   def new
-    # Render blank profile details form
     @profile = Profile.new
     RSpotify.authenticate(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET)
     @songsid = params[:songsid]
     @album = RSpotify::Album.find(params[:songsid])
     
+  end
+  
+  def searchalb
+    @user  = User.find(current_user.id)
+  end
+  
+  def searchalbcreate
+    @albumname = params[:alb][:album]
+    redirect_to choose_album_path(user_id: current_user.id, album: @albumname)
+  end
+  
+  def choosealb
+    RSpotify.authenticate(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET)
+    @album = RSpotify::Album.search(params[:album])
+  end
+  
+  def choosealbcreate
+    @songid = params[:songid]
+    redirect_to new_user_profiles_path(user_id: current_user.id, songsid: @songid)
   end
   
   def changealb
@@ -30,7 +48,6 @@ class ProfilesController < ApplicationController
   end
   
   def edit
-    # Render blank profile details form
     @profile = Profile.new
     RSpotify.authenticate(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET)
     @songsid = params[:songsid]

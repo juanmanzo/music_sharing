@@ -5,7 +5,7 @@
                 <div class = "well">
                     <h1 class = "text-center">Create Your Profile</h1>
                     <h3 class = "text-center">Search for an album you would like to share</br><i class="fa fa-play-circle"></i></h3>
-                    <%= form_for :alb, url: user_albums_path do |f|%>
+                    <%= form_for :alb, url: searchalbcreate_path do |f|%>
                       <div class="form-group">
                         <%= f.label :album, 'Album Title' %>
                         <%= f.text_field :album, class: 'form-control' %>
